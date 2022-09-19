@@ -1,3 +1,97 @@
+- # UseCase List
+- ## AuthController
+- [x] Login
+- [x] Logout
+- [x] Me
+- [ ] ResetPassword
+- [ ] UpdatePassword
+
+- ## UserController
+- [ ] Register
+- [ ] Index
+- [ ] Show
+
+- ## AdminController
+- [ ] Login
+- [ ] Logout
+- [ ] Me
+- [ ] ResetPassword
+- [ ] UpdatePassword
+
+- ## SellerController
+- [ ] Login
+- [ ] Logout
+- [ ] Me
+- [ ] ResetPassword
+- [ ] UpdatePassword
+
+- ## AddressController
+- [ ] Create
+- [ ] List
+- [ ] Show
+
+- ## UserProfileController
+- [ ] Create
+- [ ] Update
+- [ ] List
+- [ ] Show
+
+- ## CategoryController
+- [ ] Create
+- [ ] Active
+- [ ] List
+- [ ] Show
+
+- ## ProductController
+- [ ] Create
+- [ ] Active
+- [ ] List
+- [ ] Show
+- [ ] UpdatePrice
+- [ ] UpdateQuantity
+
+- ## ReviewController
+- [ ] Create
+- [ ] List
+
+- ## WishlistController
+- [ ] Create
+- [ ] List
+
+- ## CartController
+- [ ] AddToCart
+- [ ] RemoveToCart
+
+- ## OrderController
+- [ ] Create
+- [ ] List
+- [ ] Show
+- [ ] MyOrders
+- [ ] MyOrder
+- [ ] UpdateStatus
+
+- ## CouponController
+- [ ] ApplyCoupon
+- [ ] Create
+- [ ] List
+- [ ] Show
+
+- ## PaymentController
+- [ ] Create
+- [ ] List
+- [ ] Show
+- [ ] MyPayments
+- [ ] MyPayment
+- [ ] UpdateStatus
+
+- ## DeliveryController
+- [ ] Create
+- [ ] List
+- [ ] Show
+- [ ] MyDeliveries
+- [ ] MyDelivery
+- [ ] UpdateStatus
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
