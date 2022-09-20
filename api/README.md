@@ -26,8 +26,8 @@
 - [x] UpdatePassword
 
 - ## AddressController
-- [ ] Create
-- [ ] List
+- [x] Create
+- [x] List
 - [ ] Show
 
 - ## UserProfileController

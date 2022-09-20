@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Resources\AddressResource;
 use App\Models\Address;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Facades\Validator;
 
 class AddressController extends BaseController
@@ -33,5 +35,15 @@ class AddressController extends BaseController
         $success['id'] =  $address->id;
 
         return $this->handleResponse($success, 'Endereço registrado com sucesso!');
+    }
+
+    /**
+     * @param Request $request
+     * @return AnonymousResourceCollection
+     */
+    public function index(Request $request): AnonymousResourceCollection
+    {
+        $addresses = Address::all();
+        return AddressResource::collection($addresses);
     }
 }
