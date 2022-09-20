@@ -12,18 +12,18 @@
 - [x] Show
 
 - ## AdminController
-- [ ] Login
-- [ ] Logout
-- [ ] Me
-- [ ] ResetPassword
-- [ ] UpdatePassword
+- [x] Login
+- [x] Logout
+- [x] Me
+- [x] ResetPassword
+- [x] UpdatePassword
 
 - ## SellerController
-- [ ] Login
-- [ ] Logout
-- [ ] Me
-- [ ] ResetPassword
-- [ ] UpdatePassword
+- [x] Login
+- [x] Logout
+- [x] Me
+- [x] ResetPassword
+- [x] UpdatePassword
 
 - ## AddressController
 - [ ] Create
@@ -31,7 +31,7 @@
 - [ ] Show
 
 - ## UserProfileController
-- [ ] Create
+- [x] Create
 - [ ] Update
 - [ ] List
 - [ ] Show
