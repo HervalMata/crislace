@@ -3,7 +3,7 @@
 - [x] Login
 - [x] Logout
 - [x] Me
-- [ ] ResetPassword
+- [x] ResetPassword
 - [ ] UpdatePassword
 
 - ## UserController
