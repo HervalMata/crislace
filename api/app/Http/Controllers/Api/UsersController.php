@@ -3,12 +3,24 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Facades\Validator;
 
 class UsersController extends BaseController
 {
+    /**
+     * @param Request $request
+     * @return AnonymousResourceCollection
+     */
+    public function index(Request $request): AnonymousResourceCollection
+    {
+        $users = User::all();
+        return UserResource::collection($users);
+    }
+
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [

@@ -18,7 +18,7 @@ class UserAccess
      * @param $userType
      * @return JsonResponse
      */
-    public function handle(Request $request, Closure $next, $userType): JsonResponse
+    public function handle(Request $request, Closure $next, $userType)
     {
         if (auth()->user()->type == $userType) {
             return $next($request);

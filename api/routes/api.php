@@ -33,7 +33,8 @@ Route::middleware(['auth:sanctum', 'user-access:user'])->group(function () {
 });
 
 Route::middleware(['auth:sanctum', 'user-access:admin'])->group(function () {
-
+    Route::get('/users', [UsersController::class, 'index']);
+    Route::get('/users/me', [AuthController::class, 'me']);
 });
 
 Route::middleware(['auth:sanctum', 'user-access:seller'])->group(function () {
