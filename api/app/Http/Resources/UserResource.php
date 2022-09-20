@@ -24,6 +24,11 @@ class UserResource extends JsonResource
             'type' => $this->type,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
+            'profile' => [
+                'has_photo' => $this->profile->image ? true : false,
+                'image_url' => $this->profile->image_url,
+                'phone' => $this->profile->phone,
+            ]
         ];
     }
 }

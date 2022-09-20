@@ -32,9 +32,9 @@
 
 - ## UserProfileController
 - [x] Create
-- [ ] Update
-- [ ] List
-- [ ] Show
+- [x] Update
+- [x] List
+- [x] Show
 
 - ## CategoryController
 - [ ] Create
