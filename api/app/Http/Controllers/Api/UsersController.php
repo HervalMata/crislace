@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
 use App\Models\User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Facades\Validator;
@@ -21,6 +22,10 @@ class UsersController extends BaseController
         return UserResource::collection($users);
     }
 
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     */
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -42,5 +47,14 @@ class UsersController extends BaseController
         $success['name'] =  $user->name;
 
         return $this->handleResponse($success, 'Usuário registrado com sucesso!');
+    }
+
+    /**
+     * @param User $user
+     * @return UserResource
+     */
+    public function show(User $user)
+    {
+        return new UserResource($user);
     }
 }

@@ -8,8 +8,8 @@
 
 - ## UserController
 - [x] Register
-- [ ] Index
-- [ ] Show
+- [x] Index
+- [x] Show
 
 - ## AdminController
 - [ ] Login
