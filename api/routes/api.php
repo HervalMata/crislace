@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\AddressController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\ForgotPasswordController;
 use App\Http\Controllers\Api\ProfileController;
@@ -34,6 +35,7 @@ Route::middleware(['auth:sanctum', 'user-access:user'])->group(function () {
     Route::post('password/forgot-password', [ForgotPasswordController::class, 'sendResetLinkResponse'])->name('passwords.send');
     Route::post('password/reset', [ForgotPasswordController::class, 'sendResetResponse'])->name('passwords.reset');
     Route::put('/users/profile/{user}', [ProfileController::class, 'update']);
+    Route::post('/users/address', [AddressController::class, 'create']);
 });
 
 Route::middleware(['auth:sanctum', 'user-access:admin'])->group(function () {
