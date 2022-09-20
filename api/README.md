@@ -4,10 +4,10 @@
 - [x] Logout
 - [x] Me
 - [x] ResetPassword
-- [ ] UpdatePassword
+- [x] UpdatePassword
 
 - ## UserController
-- [ ] Register
+- [x] Register
 - [ ] Index
 - [ ] Show
 

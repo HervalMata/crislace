@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 
 class User extends Authenticatable
 {
@@ -23,6 +24,7 @@ class User extends Authenticatable
         'email',
         'password',
         'cpf',
+        'type',
     ];
 
     /**
@@ -44,7 +46,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function sendPasswordResetNotification($token)
+    /**
+     * @return Attribute
+     */
+    protected function type(): Attribute
+    {
+        return new Attribute(get: fn($value) => ["user", "admin", 'seller'][$value],);
+    }
+
+    /**
+     * @param $token
+     * @return void
+     */
+    public function sendPasswordResetNotification($token): void
     {
         $this->notify(new MailResetPasswordNotification($token));
     }
