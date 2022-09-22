@@ -46,4 +46,13 @@ class AddressController extends BaseController
         $addresses = Address::all();
         return AddressResource::collection($addresses);
     }
+
+    /**
+     * @param Address $address
+     * @return AddressResource
+     */
+    public function show(Address $address)
+    {
+        return new AddressResource($address);
+    }
 }

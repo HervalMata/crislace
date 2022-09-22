@@ -36,6 +36,8 @@ Route::middleware(['auth:sanctum', 'user-access:user'])->group(function () {
     Route::post('password/reset', [ForgotPasswordController::class, 'sendResetResponse'])->name('passwords.reset');
     Route::put('/users/profile/{user}', [ProfileController::class, 'update']);
     Route::post('/users/address', [AddressController::class, 'create']);
+    Route::get('/users/address', [AddressController::class, 'index']);
+    Route::get('/users/address/{address}', [AddressController::class, 'show']);
 });
 
 Route::middleware(['auth:sanctum', 'user-access:admin'])->group(function () {
