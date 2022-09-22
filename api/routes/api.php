@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AddressController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\ForgotPasswordController;
+use App\Http\Controllers\Api\ProfileAddressController;
 use App\Http\Controllers\Api\ProfileController;
 use App\Http\Controllers\Api\UsersController;
 use Illuminate\Http\Request;
@@ -38,6 +39,8 @@ Route::middleware(['auth:sanctum', 'user-access:user'])->group(function () {
     Route::post('/users/address', [AddressController::class, 'create']);
     Route::get('/users/address', [AddressController::class, 'index']);
     Route::get('/users/address/{address}', [AddressController::class, 'show']);
+    Route::get('/users/profile/addresses/{profile}', [ProfileAddressController::class, 'index']);
+    Route::post('/users/profile/address', [ProfileAddressController::class, 'store']);
 });
 
 Route::middleware(['auth:sanctum', 'user-access:admin'])->group(function () {
